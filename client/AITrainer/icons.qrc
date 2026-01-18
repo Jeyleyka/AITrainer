@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/timer.png</file>
+        <file>icons/calendar.png</file>
+        <file>icons/compass-icon.png</file>
+        <file>icons/to-do-list.png</file>
+        <file>icons/user.png</file>
+        <file>icons/calendar-hover.png</file>
+        <file>icons/discover-hover.png</file>
+        <file>icons/personal-hover.png</file>
+        <file>icons/timer-hover.png</file>
+        <file>icons/user-hover.png</file>
+        <file>icons/woman.png</file>
+        <file>icons/young-boy.png</file>
+        <file>icons/weight.png</file>
+        <file>icons/muscle.png</file>
+        <file>icons/better-health.png</file>
+        <file>icons/adult.png</file>
+        <file>icons/elder.png</file>
+        <file>icons/middle.png</file>
+        <file>icons/children.png</file>
+        <file>icons/house.png</file>
+        <file>icons/gym.png</file>
+        <file>icons/2.png</file>
+        <file>icons/3.png</file>
+        <file>icons/puzzle.png</file>
+        <file>icons/halal.png</file>
+        <file>icons/vegan.png</file>
+        <file>icons/steak.png</file>
+    </qresource>
+</RCC>
