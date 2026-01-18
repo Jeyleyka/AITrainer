@@ -1,0 +1,13 @@
+{
+    "listeners": [
+        {
+            "address": "127.0.0.1",
+            "port": 8080
+        }
+    ],
+
+    "log": {
+        "log_path": "./logs",
+        "log_level": "INFO"
+    }
+}

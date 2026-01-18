@@ -1,0 +1,23 @@
+# Сборочные папки
+*/build/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Qt Creator
+*.user
+*.user.*.prefs
+*.pro.user
+*.pro.user.*
+
+# MacOS / Linux
+.DS_Store
+*.swp
+*~
+
+# Логи
+*/logs/
+
