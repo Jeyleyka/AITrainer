@@ -1,0 +1,15 @@
+POST /infer
+Request:
+{
+    "text": string (required)
+}
+
+Response 200:
+{
+    "status": "ok",
+    "prediction": string
+}
+
+Errors:
+400 - invalid JSON
+422 - missing field
