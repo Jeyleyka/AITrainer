@@ -5,8 +5,6 @@
 
 using json = nlohmann::json;
 
-// HuggyFace токен - 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
-
 class AIService
 {
 public:

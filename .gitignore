@@ -20,4 +20,7 @@
 
 # Логи
 */logs/
+.env
+.env.local
+config.json
 

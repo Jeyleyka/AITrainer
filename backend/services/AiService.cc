@@ -1,4 +1,5 @@
 #include "AiService.h"
+#include <cstdlib>
 
 size_t AIService::write_data(void* buffer, size_t buff_size, size_t nmemb, void* userp) 
 {
@@ -58,9 +59,19 @@ std::string AIService::sendPrompt(const std::string& prompt)
 
     std::string jsonBody = body.dump();
 
+    const char* token = std::getenv("HF_TOKEN");
+
+    if (!token) {
+        std::cerr << "HF_TOKEN is not set\n";
+        return "Token missing";
+    }
+
+    std::string authHeader = "Authorization: Bearer ";
+    authHeader += token;
+
     struct curl_slist* headers = nullptr;
     headers = curl_slist_append(headers, "Content-Type: application/json");
-    headers = curl_slist_append(headers, "Authorization: Bearer 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");
+    headers = curl_slist_append(headers, authHeader.c_str());
     
     std::string responseFromServer;
 
