@@ -52,7 +52,7 @@ std::string AIService::sendPrompt(const std::string& prompt)
     body["stream"] = false;
     body["messages"] = json::array();
     body["messages"].push_back({
-        {'role', 'user'},
+        {"role", "user"},
         {"content", prompt}
     });
 
@@ -79,7 +79,7 @@ std::string AIService::sendPrompt(const std::string& prompt)
     }
 
     long httpCode = 0;
-    httpCode = curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
+    curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
 
     if (httpCode != 200)
     {

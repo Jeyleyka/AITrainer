@@ -7,7 +7,12 @@ int main()
 {
     httplib::Server svr;
 
-    svr.Post("/propmt", [](const httplib::Request& req, httplib::Response& res) {
+    svr.Post("/prompt", [](const httplib::Request& req, httplib::Response& res) {
+        std::cout << "=== Request received ===\n";
+        std::cout << "Method: POST\n";
+        std::cout << "Path: " << req.path << "\n";
+        std::cout << "Body:\n" << req.body << "\n";
+
         try
         {
             json body = json::parse(req.body);
