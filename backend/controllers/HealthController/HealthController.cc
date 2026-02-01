@@ -2,7 +2,8 @@
 
 void HealthController::health(const drogon::HttpRequestPtr& req, std::function<void (const drogon::HttpResponsePtr &)> && callback) 
 {
-    auto resp = HttpResponse::newHttpResponse();
-    resp->setBody("OK");
+    Json::Value status = healthService.getStatus();
+    auto resp = HttpResponse::newHttpJsonResponse(status);
+    resp->setStatusCode(k200OK);
     callback(resp);
 }

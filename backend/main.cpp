@@ -1,5 +1,5 @@
 #include "httplib.h"
-#include "./services/AiService.h"
+#include "./services/HuggingFaceService/HuggingFaceService.h"
 
 AIService service;
 

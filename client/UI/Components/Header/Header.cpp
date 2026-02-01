@@ -13,7 +13,12 @@ Header::Header(QWidget* parent)
 {
     this->aiManager = new AIModelManager();
 
-    aiManager->warmUpModel();
+    aiManager->checkHealth();
+
+    if (aiManager->isBackendAvailable())
+        aiManager->warmUpModel();
+    else
+        qDebug() << "Server unavailable";
 
     QVBoxLayout* layout = new QVBoxLayout(this);
 

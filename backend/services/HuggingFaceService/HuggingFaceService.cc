@@ -1,4 +1,4 @@
-#include "AiService.h"
+#include "HuggingFaceService.h"
 #include <cstdlib>
 
 size_t AIService::write_data(void* buffer, size_t buff_size, size_t nmemb, void* userp) 

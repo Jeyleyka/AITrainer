@@ -1,18 +1,21 @@
 #pragma once
 
 #include <drogon/HttpController.h>
-#include <jsoncpp/json/json.h>
+#include "../../services/HealthService/HealthService.h"
 
 using namespace drogon;
 
 class HealthController : public HttpController<HealthController>
 {
 public:
+    HealthController() = default;
+
     METHOD_LIST_BEGIN
     ADD_METHOD_TO(HealthController::health, "/health", Get);
     METHOD_LIST_END
 
-    using callback = std::function<void (const HttpResponsePtr &)>;
+    void health(const HttpRequestPtr &, std::function<void(const HttpResponsePtr &)> &&callback);
 
-    void health(const HttpRequestPtr &, callback &&callback);
+private:
+    HealthService healthService;
 };
